@@ -16,7 +16,7 @@ import java.util.function.*;
 
 @AutoService({GraphicsBootstrapper.class, ImmediateWindowProvider.class})
 public class EarlyDisplay implements GraphicsBootstrapper, ImmediateWindowProvider, IOrderedProvider {
-    public static final String NAME = "Xian-Service-EarlyDisplay";
+    public static final String NAME = "xian";
     private static final Logger LOGGER = LoggerFactory.getLogger(NAME);
     private static ImmediateWindowProvider PROVIDER;
 

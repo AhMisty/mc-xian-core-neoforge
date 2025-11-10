@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 @AutoService(IModFileCandidateLocator.class)
 public class ModLocator implements IModFileCandidateLocator {
-    public static final String NAME = "Xian-Service-ModLocator";
+    public static final String NAME = "xian";
     private static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
     @Override

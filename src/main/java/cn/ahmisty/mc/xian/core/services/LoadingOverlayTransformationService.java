@@ -1,5 +1,6 @@
 package cn.ahmisty.mc.xian.core.services;
 
+import com.google.auto.service.AutoService;
 import com.mojang.logging.LogUtils;
 import cpw.mods.modlauncher.api.IEnvironment;
 import cpw.mods.modlauncher.api.ITransformationService;
@@ -7,27 +8,27 @@ import cpw.mods.modlauncher.api.ITransformer;
 import cpw.mods.modlauncher.api.IncompatibleEnvironmentException;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Set;
 
+@AutoService(ITransformationService.class)
 public class LoadingOverlayTransformationService implements ITransformationService {
-    public static final Logger LOGGER = LogUtils.getLogger();
-    public static final String Name = "xian";
+    public static final String NAME = "xian";
+    private static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
     @Override
     public @NotNull String name() {
-        return Name;
+        return NAME;
     }
 
     @Override
     public void initialize(IEnvironment environment) {
-        LOGGER.info("xian-ITransformationService loading");
     }
 
     @Override
     public void onLoad(IEnvironment env, Set<String> otherServices) throws IncompatibleEnvironmentException {
-        LOGGER.info("xian-ITransformationService loaded");
     }
 
     @Override
