@@ -1,4 +1,4 @@
-package cn.ahmisty.mc.xian;
+package cn.ahmisty.mc.xian.core;
 
 import org.slf4j.Logger;
 

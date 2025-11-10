@@ -1,10 +1,10 @@
-package cn.ahmisty.mc.xian;
-
-import java.util.List;
+package cn.ahmisty.mc.xian.core;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.ModConfigSpec;
+
+import java.util.List;
 
 // An example config class. This is not required, but it's a good idea to have one to keep your config organized.
 // Demonstrates how to use Neo's config APIs

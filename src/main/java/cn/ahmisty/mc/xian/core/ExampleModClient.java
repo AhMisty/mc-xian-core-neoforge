@@ -1,4 +1,4 @@
-package cn.ahmisty.mc.xian;
+package cn.ahmisty.mc.xian.core;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
