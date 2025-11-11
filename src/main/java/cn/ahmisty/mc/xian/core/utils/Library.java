@@ -1,4 +1,4 @@
-package cn.ahmisty.mc.xian.utils;
+package cn.ahmisty.mc.xian.core.utils;
 
 import com.mojang.logging.LogUtils;
 import net.neoforged.fml.loading.FMLPaths;
@@ -32,7 +32,7 @@ public class Library {
         if (!Files.exists(this.path)) {
             Path pathInJar = Path.of("/libraries").resolve(name);
             LOGGER.info("Could not find library {} at {}, try to find in jar path {}", this.name, this.dir, pathInJar);
-            try (InputStream stream = Library.class.getResourceAsStream(pathInJar.toString())) {
+            try (InputStream stream = Library.class.getClassLoader().getResourceAsStream(pathInJar.toString())) {
                 if (stream == null) {
                     LOGGER.error("Could not find library {} in jar path {}", this.name, pathInJar);
                     initialized = false;

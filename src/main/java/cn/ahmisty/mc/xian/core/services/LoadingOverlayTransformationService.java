@@ -1,7 +1,6 @@
 package cn.ahmisty.mc.xian.core.services;
 
 import com.google.auto.service.AutoService;
-import com.mojang.logging.LogUtils;
 import cpw.mods.modlauncher.api.IEnvironment;
 import cpw.mods.modlauncher.api.ITransformationService;
 import cpw.mods.modlauncher.api.ITransformer;

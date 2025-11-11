@@ -1,6 +1,6 @@
 package cn.ahmisty.mc.xian.core.services;
 
-import cn.ahmisty.mc.xian.utils.Library;
+import cn.ahmisty.mc.xian.core.utils.Library;
 import com.google.auto.service.AutoService;
 import net.neoforged.fml.loading.FMLConfig;
 import net.neoforged.neoforgespi.earlywindow.GraphicsBootstrapper;
@@ -41,7 +41,7 @@ public class EarlyDisplay implements GraphicsBootstrapper, ImmediateWindowProvid
     public void initLink() {
         Library library = new Library("xian.dll", Arena.ofConfined());
         if (library.instance == null) return;
-        MethodHandle print = library.loadFunction("print", FunctionDescriptor.ofVoid());
+        MethodHandle print = library.loadFunction("print", FunctionDescriptor.ofVoid(), Linker.Option.critical(false));
         try {
             print.invokeExact();
         } catch (Throwable e) {
