@@ -52,7 +52,7 @@ public class Library {
             initialized = true;
         }
         if (initialized) {
-            this.instance = SymbolLookup.libraryLookup(this.path, arena);
+            this.instance = SymbolLookup.libraryLookup(this.path, this.arena);
             LOGGER.info("Successfully loaded library {} at {}", this.name, this.path);
         } else {
             this.instance = null;
